@@ -74,10 +74,10 @@ foreach($post_data['events'] as $hook_order) {
         # Данные покупателя
         $oa_order_parts->add([
             'recipientName' => $ms_order->get('agent/name'),
+            'phone'         => $ms_order->get('agent/phone'),
             'profile'       => [
                 'name'      => $ms_order->get('agent/name'),
                 'type'      => 'physical',
-                'phone'     => $ms_order->get('agent/phone'),
                 'email'     => $ms_order->get('agent/email'),
             ],
         ]);
